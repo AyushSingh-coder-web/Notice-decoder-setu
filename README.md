@@ -43,12 +43,36 @@ The project focuses on making academic information easier to understand, organiz
 
 Update this section to reflect the technologies actually used in the project.
 
-- **Frontend:** [Add your actual framework or libraries]
-- **Styling:** [Add your actual CSS framework or styling approach]
-- **Build Tool:** [Add your actual build tool]
-- **AI Integration:** [Add the AI provider and model, if configured]
-- **Deployment:** Netlify
-- **Version Control:** Git and GitHub
+- ## 🛠️ Technology Stack
+
+### Frontend
+- **HTML5** — Web page structure
+- **TypeScript** — Type-safe application logic
+- **React 19** — Component-based user interface
+- **Tailwind CSS 4** — Responsive styling and UI design
+- **Lucide React** — Interface icons
+- **Motion** — UI animations
+
+### Backend
+- **Node.js** — JavaScript runtime
+- **Express.js** — Backend API and server endpoints
+- **TypeScript** — Backend development
+
+### AI & Document Processing
+- **Google Gemini API** — AI-powered notice extraction, when configured
+- **pdf-parse** — PDF text extraction
+
+### Development & Deployment
+- **Vite 8** — Development server and production build tool
+- **Vitest** — Automated testing
+- **Git & GitHub** — Version control and source code hosting
+- **Netlify** — Live website deployment
+
+### Supporting Libraries
+- **dotenv** — Environment variable configuration
+- **date/time utilities** — Academic event date and time processing
+- **Calendar export** — iCalendar (`.ics`) generation
+
 
 ## 🚀 Getting Started
 
