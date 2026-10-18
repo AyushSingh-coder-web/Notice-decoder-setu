@@ -1,0 +1,6 @@
+{
+  "name": "Notice Decoder — Academic Change Intelligence",
+  "description": "AI-powered Academic Change Intelligence. Detect notice schedule revisions, analyze academic calendar impacts, identify time overlaps and deadline collisions, and verify changes before updating your schedule.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

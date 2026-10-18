@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars for high-density academic panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 170, 190, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 170, 190, 0.4);
+}
+
+/* Right-to-Left drawer animation */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-from-right {
+  animation: slideInFromRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* =========================================================================
+   LIGHT THEME OVERRIDES (Triggered when html has .light or lacks .dark)
+   ========================================================================= */
+html.light,
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html.light body,
+html:not(.dark) body {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+/* Scrollbars in Light Mode */
+html.light ::-webkit-scrollbar-thumb,
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.25);
+}
+html.light ::-webkit-scrollbar-thumb:hover,
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+/* Backgrounds */
+html.light .bg-\[\#08090B\],
+html:not(.dark) .bg-\[\#08090B\] {
+  background-color: #F8FAFC !important;
+}
+
+html.light .bg-\[\#08090B\]\/90,
+html:not(.dark) .bg-\[\#08090B\]\/90 {
+  background-color: rgba(248, 250, 252, 0.92) !important;
+}
+
+html.light .bg-\[\#0F1115\],
+html:not(.dark) .bg-\[\#0F1115\] {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-\[\#0F1115\]\/95,
+html:not(.dark) .bg-\[\#0F1115\]\/95 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+}
+
+html.light .bg-\[\#151820\],
+html:not(.dark) .bg-\[\#151820\] {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .bg-\[\#1e2330\],
+html:not(.dark) .bg-\[\#1e2330\] {
+  background-color: #E2E8F0 !important;
+}
+
+html.light .bg-\[\#1a1e28\],
+html:not(.dark) .bg-\[\#1a1e28\] {
+  background-color: #E2E8F0 !important;
+}
+
+html.light .bg-\[\#1f2432\],
+html:not(.dark) .bg-\[\#1f2432\] {
+  background-color: #E2E8F0 !important;
+}
+
+/* Borders */
+html.light .border-\[\#252936\],
+html:not(.dark) .border-\[\#252936\] {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .border-\[\#252936\]\/50,
+html:not(.dark) .border-\[\#252936\]\/50 {
+  border-color: rgba(226, 232, 240, 0.6) !important;
+}
+
+/* Text Colors */
+html.light .text-\[\#F5F7FA\],
+html:not(.dark) .text-\[\#F5F7FA\] {
+  color: #0F172A !important;
+}
+
+html.light .text-\[\#A6ACB8\],
+html:not(.dark) .text-\[\#A6ACB8\] {
+  color: #475569 !important;
+}
+
+html.light .text-\[\#A6ACB8\]\/60,
+html:not(.dark) .text-\[\#A6ACB8\]\/60 {
+  color: rgba(71, 85, 105, 0.75) !important;
+}
+
+html.light .text-\[\#A6ACB8\]\/80,
+html:not(.dark) .text-\[\#A6ACB8\]\/80 {
+  color: rgba(71, 85, 105, 0.9) !important;
+}
+
+html.light .placeholder-\[\#A6ACB8\]\/60::placeholder,
+html:not(.dark) .placeholder-\[\#A6ACB8\]\/60::placeholder {
+  color: #94A3B8 !important;
+}
+
+/* Hover States */
+html.light .hover\:bg-\[\#151820\]:hover,
+html:not(.dark) .hover\:bg-\[\#151820\]:hover {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .hover\:bg-\[\#1e2330\]:hover,
+html:not(.dark) .hover\:bg-\[\#1e2330\]:hover {
+  background-color: #E2E8F0 !important;
+}
+
+html.light .hover\:bg-\[\#1f2432\]:hover,
+html:not(.dark) .hover\:bg-\[\#1f2432\]:hover {
+  background-color: #E2E8F0 !important;
+}
+
+html.light .hover\:text-\[\#F5F7FA\]:hover,
+html:not(.dark) .hover\:text-\[\#F5F7FA\]:hover {
+  color: #0F172A !important;
+}
+
+html.light .hover\:border-\[\#252936\]:hover,
+html:not(.dark) .hover\:border-\[\#252936\]:hover {
+  border-color: #CBD5E1 !important;
+}
+
+/* Inputs & Form Elements in Light Mode */
+html.light input:not([type="checkbox"]):not([type="radio"]),
+html.light textarea,
+html.light select,
+html:not(.dark) input:not([type="checkbox"]):not([type="radio"]),
+html:not(.dark) textarea,
+html:not(.dark) select {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+}
+
+html.light input:focus,
+html.light textarea:focus,
+html.light select:focus,
+html:not(.dark) input:focus,
+html:not(.dark) textarea:focus,
+html:not(.dark) select:focus {
+  border-color: #8B5CF6 !important;
+}
+
+/* Light Theme Tint Enhancements for Cards & Badges */
+html.light .bg-amber-950\/40,
+html.light .bg-amber-950\/30,
+html:not(.dark) .bg-amber-950\/40,
+html:not(.dark) .bg-amber-950\/30 {
+  background-color: #FEF3C7 !important;
+  border-color: #FCD34D !important;
+}
+
+html.light .text-amber-400,
+html.light .text-amber-300,
+html:not(.dark) .text-amber-400,
+html:not(.dark) .text-amber-300 {
+  color: #B45309 !important;
+}
+
+html.light .text-amber-200\/80,
+html:not(.dark) .text-amber-200\/80 {
+  color: #92400E !important;
+}
+
+html.light .bg-cyan-950\/40,
+html.light .bg-cyan-950\/30,
+html:not(.dark) .bg-cyan-950\/40,
+html:not(.dark) .bg-cyan-950\/30 {
+  background-color: #E0F2FE !important;
+  border-color: #7DD3FC !important;
+}
+
+html.light .text-cyan-400,
+html.light .text-cyan-300,
+html:not(.dark) .text-cyan-400,
+html:not(.dark) .text-cyan-300 {
+  color: #0284C7 !important;
+}
+
+html.light .bg-violet-950\/40,
+html.light .bg-violet-950\/30,
+html.light .bg-violet-950\/20,
+html:not(.dark) .bg-violet-950\/40,
+html:not(.dark) .bg-violet-950\/30,
+html:not(.dark) .bg-violet-950\/20 {
+  background-color: #EDE9FE !important;
+  border-color: #DDD6FE !important;
+}
+
+html.light .text-violet-300,
+html:not(.dark) .text-violet-300 {
+  color: #6D28D9 !important;
+}
+
+html.light .text-violet-400,
+html:not(.dark) .text-violet-400 {
+  color: #7C3AED !important;
+}
+
+html.light .border-violet-700\/50,
+html:not(.dark) .border-violet-700\/50 {
+  border-color: #C4B5FD !important;
+}
